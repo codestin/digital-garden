@@ -23,10 +23,14 @@ relative_permalinks: false
 
 plugins:
   - jekyll-last-modified-at
+  - jekyll-sass-converter
 
 sass:
-  sass_dir:          _sass
-  style:            :compressed
+  sass_dir: _sass
+  style: compressed
+  load_paths:
+    - _sass
+    - .
 
 collections:
   notes:
