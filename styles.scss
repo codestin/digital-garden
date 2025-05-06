@@ -1,6 +1,14 @@
 ---
 ---
 
-@import "normalize";
-@import "code";
-@import "style";
+@use "normalize";
+@use "code";
+@use "style";
+
+:root {
+  --background-color: #FFFCF0;
+}
+
+html, body {
+  background-color: var(--background-color);
+}
