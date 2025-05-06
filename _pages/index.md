@@ -1,9 +1,12 @@
 ---
-layout: page
+layout: post-list
 title: Home
-id: home
 permalink: /
 ---
+
+Welcome to my digital garden. This is where I share my thoughts, ideas, and learnings about technology, personal development, and the intersection of digital and analog life.
+
+Feel free to explore my [latest posts](#latest), browse by [topics](#topics), or learn more [about me](/about).
 
 # Welcome! 🌱
 
