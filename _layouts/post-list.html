@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<h1>Latest</h1>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="post-meta">{{ post.date | date: "%B %d, %Y" }} · {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} minute read</span>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2>Topics</h2>
+<div class="topics">
+  {% assign tags = site.tags | sort %}
+  {% for tag in tags %}
+    <a href="/tags/{{ tag[0] }}" class="topic-tag">{{ tag[0] }}</a>
+  {% endfor %}
+</div> 
