@@ -1,14 +1,22 @@
 ---
 ---
 
+// Base styles
 @use "normalize";
 @use "code";
 @use "style";
 
+// CSS Custom Properties
 :root {
   --background-color: #FFFCF0;
+  --text-color: #333;
+  --link-color: #0066cc;
+  --max-width: 800px;
+  --spacing-unit: 1.5rem;
 }
 
+// Global styles
 html, body {
   background-color: var(--background-color);
+  color: var(--text-color);
 }
