@@ -7,9 +7,29 @@
   <div class="container">
     <header>
       <nav class="nav">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/now">Now</a>
+        <div class="nav-brand">
+          <a href="/">{{ site.title }}</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-menu">
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link">Writing</a>
+            <div class="dropdown-content">
+              <a href="/writing/creativity">Creativity</a>
+              <a href="/writing/health">Health</a>
+              <a href="/writing/practice">Practice</a>
+            </div>
+          </div>
+          <a href="/consulting" class="nav-item">Consulting</a>
+          <a href="/speaking" class="nav-item">Speaking</a>
+          <a href="/book" class="nav-item">Book</a>
+          <a href="/about" class="nav-item">About</a>
+          <a href="/now" class="nav-item">Now</a>
+        </div>
       </nav>
     </header>
 

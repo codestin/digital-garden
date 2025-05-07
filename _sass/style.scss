@@ -1,4 +1,4 @@
-$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 $text-color: #333;
 $background-color: #FFFCF0;
 $link-color: #0066cc;
@@ -64,10 +64,96 @@ li {
 }
 
 .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
   margin-bottom: 2rem;
+  position: relative;
   
-  a {
-    margin-right: 1rem;
+  .nav-brand {
+    font-weight: bold;
+    
+    a {
+      font-size: 1.2rem;
+      color: $text-color;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    
+    span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: $text-color;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    
+    .nav-item {
+      color: $text-color;
+      text-decoration: none;
+      position: relative;
+      
+      &:hover {
+        text-decoration: none;
+        color: $link-color;
+      }
+    }
+    
+    .dropdown {
+      position: relative;
+      
+      .nav-link {
+        cursor: pointer;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $background-color;
+        min-width: 160px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 4px;
+        padding: 0.5rem 0;
+        z-index: 1000;
+        
+        a {
+          color: $text-color;
+          padding: 0.5rem 1rem;
+          display: block;
+          text-decoration: none;
+          
+          &:hover {
+            background-color: darken($background-color, 5%);
+            text-decoration: none;
+          }
+        }
+      }
+      
+      &:hover .dropdown-content {
+        display: block;
+      }
+    }
   }
 }
 
@@ -118,6 +204,54 @@ li {
   
   h2 {
     font-size: 1.25rem;
+  }
+  
+  .nav {
+    .nav-toggle {
+      display: block;
+    }
+    
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+      
+      &.active {
+        display: flex;
+      }
+      
+      .nav-item {
+        width: 100%;
+      }
+      
+      .dropdown {
+        width: 100%;
+        
+        .dropdown-content {
+          position: static;
+          box-shadow: none;
+          padding-left: 1rem;
+          display: none;
+          
+          a {
+            padding: 0.5rem 0;
+          }
+        }
+        
+        &.active .dropdown-content {
+          display: block;
+        }
+      }
+    }
   }
 }
 
