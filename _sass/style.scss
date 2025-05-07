@@ -5,6 +5,8 @@ $link-color: #0066cc;
 $max-width: 800px;
 $spacing-unit: 1.5rem;
 
+@use "sass:color";
+
 html {
   background: #FFFCF0;
 }
@@ -144,7 +146,7 @@ li {
           text-decoration: none;
           
           &:hover {
-            background-color: darken($background-color, 5%);
+            background-color: color.adjust($background-color, $lightness: -5%);
             text-decoration: none;
           }
         }
