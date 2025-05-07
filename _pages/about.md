@@ -23,4 +23,4 @@ Feel free to reach out to me through:
 
 This digital garden is built with Jekyll and hosted on Netlify. It's designed to be a space for evergreen content that grows and evolves over time.
 
-Color scheme used is https://stephango.com/flexoki 
+Color scheme used is [Flexoki](https://stephango.com/flexoki)
