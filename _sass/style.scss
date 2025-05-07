@@ -64,7 +64,7 @@ a {
     text-decoration: underline;
   }
 
-  &:not(.internal-link):not(.footnote):not(.reversefootnote) {
+  &[href^="http"]:not(.internal-link):not(.footnote):not(.reversefootnote) {
     &::after {
       content: "↗";
       display: inline-block;
